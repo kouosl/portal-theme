@@ -4,23 +4,14 @@ namespace kouosl\theme;
 
 use Yii;
 
-
-/**
- * Module [[Theme]]
- * Yii2 theme module.
- */
 class Module extends \yii\base\Module
 {
-    //public $controllerNamespace = 'kouosl\theme\controllers\backend';
-
-
     public function init()
     {
         parent::init();
         $this->registerTranslations();
     }
-
-
+    
     public function registerTranslations()
     {
         Yii::$app->i18n->translations['theme/*'] = [
@@ -43,9 +34,6 @@ class Module extends \yii\base\Module
                 'theme/theme' => 'theme.php',
             ],
         ];
-
         return Yii::t('theme/' . $category, $message, $params, $language);
     }
-
-
 }
