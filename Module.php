@@ -23,17 +23,4 @@ class Module extends \yii\base\Module
             ],
         ];
     }
-
-    public static function t($category, $message, $params = [], $language = null)
-    {
-        Yii::$app->i18n->translations['theme/*'] = [
-            'class' => 'yii\i18n\PhpMessageSource',
-            'sourceLanguage' => 'en-US',
-            'basePath' => '@kouosl/theme/messages',
-            'fileMap' => [
-                'theme/theme' => 'theme.php',
-            ],
-        ];
-        return Yii::t('theme/' . $category, $message, $params, $language);
-    }
 }
